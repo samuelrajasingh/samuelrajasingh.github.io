@@ -2,6 +2,7 @@
 
 <html>
 	<head>
+		<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@13.0.1/dist/lazyload.min.js"></script>
 		<title>Raja singh Samuel</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -15,7 +16,7 @@
 				<div class="top">
 
 					<!-- Logo -->
-						<div id="logo"><a href="#about" >
+						<div id="logo"><a href="#about" class="scrolly" >
 							<span class="image avatar48"><img src="images/blue-bg.svg" alt="" /></span></span>
 							<h1 id="title">Raja singh Samuel</h1>
 							<p>Computerscience Engineer<br>Developer and Designer</p></a>
@@ -80,13 +81,13 @@
 							<div class="row">
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a href="#"><video no-controls loop autoplay src="videos/srscoding.mov" alt="" width="100%" height="auto" /></a>
+										<a href="#"><video class="lazy" loading="lazy" no-controls loop autoplay data-src="videos/srscoding.mov" alt="" width="100%" height="auto" /></a>
 										<header>
 											<h3>Coding Blog</h3>
 										</header>
 									</article>
 									<article class="item">
-										<a href="#" class="image fit"><video no-controls loop src="videos/tfl.mov" alt="" width="100%" height="auto" autoplay /></a>
+										<a href="#" class="image fit"><video class="lazy" loading="lazy" no-controls loop src="videos/tfl.mov" alt="" width="100%" height="auto" autoplay /></a>
 										<header>
 											<h3>Ml-labeling implemented in app</h3>
 										</header>
@@ -94,13 +95,13 @@
 								</div>
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a href="#" class="image fit"><video no-controls loop src="videos/storyApp.mov" alt="" width="100%" height="auto" autoplay /></a>
+										<a href="#" class="image fit"><video class="lazy" loading="lazy" no-controls loop src="videos/storyApp.mov" alt="" width="100%" height="auto" autoplay /></a>
 										<header>
 											<h3>Story App created with flutter</h3>
 										</header>
 									</article>
 									<article class="item">
-										<a href="#" class="image fit"><video no-controls loop src="videos/musicDesign.mov" alt="" width="100%" height="auto" autoplay /></a>
+										<a href="#" class="image fit"><video class="lazy" loading="lazy" no-controls loop src="videos/musicDesign.mov" alt="" width="100%" height="auto" autoplay /></a>
 										<header>
 											<h3>Music player with Figma </h3>
 										</header>
@@ -108,13 +109,13 @@
 								</div>
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a href="#" class="image fit"><video no-controls loop src="videos/tapBeat.mov" alt="" width="100%" height="auto" autoplay /></a>
+										<a href="#" class="image fit"><video class="lazy" loading="lazy" no-controls loop src="videos/tapBeat.mp4" alt="" width="100%" height="auto" autoplay /></a>
 										<header>
 											<h3>Tap Beat with JS</h3>
 										</header>
 									</article>
 									<article class="item">
-										<a href="#" class="image fit"><video no-controls loop src="videos/quizApp.mov" alt="" width="100%" height="auto" autoplay /></a>
+										<a href="#" class="image fit"><video class="lazy" loading="lazy" no-controls loop src="videos/quizApp.mov" alt="" width="100%" height="auto" autoplay /></a>
 										<header>
 											<h3>quizApp made with java</h3>
 										</header>
@@ -178,6 +179,8 @@
 			</div>
 
 		<!-- Scripts -->
+		
+		
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
@@ -185,6 +188,11 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script>
+				var lazyLoadInstance = new LazyLoad({
+					elements_selector: ".lazy"
+					// ... more custom settings?
+				});
+				</script>
 	</body>
 </html>
